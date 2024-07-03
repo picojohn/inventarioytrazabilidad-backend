@@ -22,9 +22,6 @@ return new class extends Migration
             $table->timestamp('last_used_at')->nullable();
             $table->timestamps();
 
-            // Especificar longitud para tokenable_type y crear índice explícito
-            $table->string('tokenable_type', 191);
-            $table->index(['tokenable_type', 'tokenable_id'], 'idx_tokenable');
         });
     }
 
